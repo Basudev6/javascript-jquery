@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Discount and Net Amount</title>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>Sale Amount</td>
+                    <td><input type="text" id="txtv1"></td>
+                </tr>
+                <tr>
+                    <td>Discount(%)</td>
+                    <td><input type="text" id="txtv2"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="calculate" onclick="calculate()"></td>
+                </tr>
+                <tr>
+                    <td>Discount</td>
+                    <td><input type="text" id="txtResult1"></td>
+                </tr>
+                <tr>
+                    <td>Net Amount</td>
+                    <td><input type="text" id="txtResult2"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    <script>
+        function calculate()
+        {
+            var saleAmount = Number(document.getElementById("txtv1").value);
+            var discountPer = Number(document.getElementById("txtv2").value);
+
+            var discountAmt = saleAmount*discountPer/100;
+
+            document.getElementById("txtResult1").value = discountAmt;
+
+            var netAmount = saleAmount-discountAmt;
+
+            document.getElementById("txtResult2").value = netAmount;
+
+        }
+    </script>
+</html>

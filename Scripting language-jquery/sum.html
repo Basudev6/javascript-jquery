@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>sum of two number using jquery</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Value 1</td>
+                <td><input type="text" id="txtv1"></td>
+            </tr>
+            <tr>
+                <td>Value 2</td>
+                <td><input type="text" id="txtv2"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="btnAdd" value="Add"</td>
+            </tr>
+            <tr>
+                <td><input text="text" id="txtsum"></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        // function sum()
+        // {
+        //     var a=$("#txtv1").val();
+        //     var b=$("#txtv2").val();
+        //     var c=Number(a)+Number(b);
+        //     $("#txtsum").val(c); 
+        // }
+            $("#btnAdd").click(function()
+            {
+                var a=$("#txtv1").val();
+                var b=$("#txtv2").val();
+                var c=Number(a)+Number(b);
+                $("#txtsum").val(c); 
+            });
+
+    </script>
+</html>

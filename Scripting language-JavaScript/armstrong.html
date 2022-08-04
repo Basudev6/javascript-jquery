@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Test</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>value</td>
+                <td><input type="text" id="txtv1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Armstrong Check" onclick="armstrong()"></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" id="txtResult"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function armstrong()
+    {
+
+        var n = Number(document.getElementById("txtv1").value);
+        var temp1=n;
+        var temp2=n;
+        var rem,count=0,sum=0;
+        while(n>0)
+        {
+            n=Math.floor(n/10);
+            count=count+1;
+        }
+        while(temp1>0)
+        {
+            rem=temp1%10;
+            sum=sum+Math.pow(rem,count);
+            temp1=Math.floor(temp1/10);
+        }
+        if(temp2==sum)
+            document.getElementById("txtResult").value="Armstrong";
+        else
+            document.getElementById("txtResult").value="Not Armstrong";
+    }
+    </script>
+</html>

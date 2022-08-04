@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of digits</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>value</td>
+                <td><input type="text" id="txtv1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Sum of digits" onclick="digitSum()"></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" id="txtResult"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function digitSum()
+    {
+        var n = Number(document.getElementById("txtv1").value);
+        var rem,s=0;
+        while(n>0)
+        {
+            rem=n%10;
+            s=s+rem;
+            n=Math.floor(n/10);
+        }
+        document.getElementById("txtResult").value=s;
+    }
+    
+</script>
+</html>

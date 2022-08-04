@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Sum of two numbers</title>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>First Number</td>
+                    <td><input type="text" id="txtv1"></td>
+                </tr>
+                <tr>
+                    <td>Second Number</td>
+                    <td><input type="text" name="" id="txtv2"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Add" id="btnAdd" onclick="Add()"></td>
+                </tr>
+                <tr>
+                    <td>Result</td>
+                    <td><input type="text" id="txtResult"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    <script>
+        function Add(){
+            var a = Number(document.getElementById("txtv1").value);
+            var b = Number(document.getElementById("txtv2").value);
+            var c = a+b;
+
+            document.getElementById("txtResult").value = c;
+        }
+    </script>
+</html>

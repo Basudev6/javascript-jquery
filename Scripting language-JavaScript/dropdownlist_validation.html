@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Course</td>
+                <td>
+                    <select id="ddlcourse">
+                        <option>Select</option>
+                        <option>BBA</option>
+                        <option>BCA</option>
+                        <option>BIM</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="submit" onclick="check()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    
+    function check()
+    {
+        var course = document.getElementById("ddlcourse");
+        if(course.selectedIndex==0)
+        {
+            alert("Please select course");
+
+        }
+    }
+</script>
+</html>

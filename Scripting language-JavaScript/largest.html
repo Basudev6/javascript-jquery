@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Check largest number</title>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>Value 1</td>
+                    <td><input type="text" id="txtv1"></td>
+                </tr>
+                <tr>
+                    <td>Value 2</td>
+                    <td><input type="text" id="txtv2"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Check" onclick="check()"></td>
+                </tr>
+                <tr>
+                    <td>Largest</td>
+                    <td><input type="text" id="txtResult"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    <script>
+        function check()
+        {
+            var a = Number(document.getElementById("txtv1").value);
+            var b = Number(document.getElementById("txtv2").value);
+
+            if(a>b)
+                document.getElementById("txtResult").value =a;
+            else
+                document.getElementById("txtResult").value =b;
+
+        }
+    </script>
+</html>

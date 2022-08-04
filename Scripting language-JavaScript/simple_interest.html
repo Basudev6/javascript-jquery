@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Simple Interest</title>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>Principle(Rs.)</td>
+                    <td><input type="text" id="txtv1"></td>
+                </tr>
+                <tr>
+                    <td>Time(Year)</td>
+                    <td><input type="text" id="txtv2"></td>
+                </tr>
+                <tr>
+                    <td>Rate(%)</td>
+                    <td><input type="text" id="txtv3"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Calculate" id="btncalcu" onclick="Interest()"></td>
+                </tr>
+                <tr>
+                    <td>Simple Interest</td>
+                    <td><input type="text" id="txtResult"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    <script>
+        function Interest(){
+            var p = Number(document.getElementById("txtv1").value);
+            var t = Number(document.getElementById("txtv2").value);
+            var r = Number(document.getElementById("txtv3").value);
+            var c = (p*t*r)/100;
+
+            document.getElementById("txtResult").value = c;
+        }
+    </script>
+</html>

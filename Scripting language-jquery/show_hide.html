@@ -1,0 +1,17 @@
+
+<html>
+    <head>
+        <title>Show and hide paragraph</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <p id="para">This is a paragraph.</p>
+        <input type="button" id="btn" value="show/hide">
+    </body>
+    <script>
+        $("#btn").click(function()
+        {
+            $("#para").toggle();
+        });
+    </script>
+</html>

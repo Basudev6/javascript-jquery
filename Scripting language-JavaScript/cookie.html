@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Enter your name</td>
+                <td><input type="text" id="txtname"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Set" onclick="setCookie()"></td>
+                <td><input type="button" value="Read" onclick="readCookie()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function setCookie()
+    {
+        document.cookie="name="+document.getElementById("txtname").value;
+        document.getElementById("txtname").value="";
+    }
+
+    function readCookie()
+    {
+        var x = document.cookie;
+        var name=x.split("=")[1];
+        document.getElementById("txtname").value=name;
+    }
+    
+</script>
+</html>

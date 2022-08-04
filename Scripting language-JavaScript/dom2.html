@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    Item Name <input type="text" id="myitem"> 
+    <input type="button" value="Add In List" onclick="addList()">
+    <h2>My Shopping List</h2>
+    <ul id="mylist"></ul>
+</body>
+<script>
+    function addList()
+    {
+        var list = document.createElement("li");
+        var text = document.createTextNode(document.getElementById("myitem").value);
+        list.appendChild(text); 
+        document.getElementById("mylist").appendChild(list);
+
+        document.getElementById("myitem").value="";
+        document.getElementById("myitem").focus();
+
+    }
+</script>
+</html>
